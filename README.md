@@ -1,25 +1,29 @@
-# vue-flow-grid
+# v-flow
 
-A simple flow grid component for Vue.js.
+A simple waterfall directive for Vue.js.
 
 ## How to use
 
 ### Install
 
-`npm install vue-flow-grid`
+`npm install --save v-flow`
+
+or
+
+`yarn add v-flow`
 
 ### Import
 
 ```js
     import Vue from 'vue';
-    import FlowGrid from 'vue-flow-grid';
-    Vue.use(FlowGrid);
+    import VFlow from 'v-flow';
+    Vue.use(VFlow);
 ```
 
 ### Example
 
 ```html
-<ul v-flowgrid="3">
+<ul v-flow="3">
     <li>Lorem ipsum dolor sit amet.</li>
     <li>Eum at possimus eos soluta.</li>
     <li>Veniam quidem, repudiandae blanditiis vitae.</li>

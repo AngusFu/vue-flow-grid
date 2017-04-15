@@ -66,7 +66,7 @@ function installVFlowGrid(Vue, options) {
         }
     };
 
-    Vue.directive('flowgrid', {
+    Vue.directive('flow', {
         inserted(el, binding, vnode, oldVnode) {
             /**
              * hide each item as soon as they are inserted

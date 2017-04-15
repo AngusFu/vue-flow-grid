@@ -20,10 +20,10 @@
     }
     
     .grid-con > div > div > div {
-      font-size: 16px;
+      font-size: 26px;
       text-align: center;
-      line-height: 2;
-      background-color: #22e8dd;
+      background-color: #808080;
+      color: #fff;
     }
 
     .btn {
@@ -47,9 +47,11 @@
     <button class="btn" @click="add">add new grid</button>
     <button class="btn" @click="remove">remove new grid</button>
     <button class="btn" @click="reset">reset grids</button>
-    <div v-flowgrid="colNum" class="grid-con">
+    <div v-flow="colNum" class="grid-con">
         <div v-for="(item, index) in grids">
-          <div :style="{height: item + 'px'}">extra-{{index}}</div>
+          <div :style="[{height: item + 'px'}, {'line-height': item + 'px'}]">
+            {{index}}
+          </div>
         </div>
         
     </div>
@@ -67,7 +69,7 @@
       data() {
         return {
           colNum: 4,
-          grids: Array.from({ length: 5}, _ => 100 + 300 * Math.random())
+          grids: Array.from({ length: 8}, _ => 100 + 300 * Math.random())
         };
       },
       methods: {
@@ -80,13 +82,13 @@
           }
         },
         add() {
-          this.grids.push(100 + 300 * Math.random());
+          this.grids.push(200 + 200 * Math.random());
         },
         remove() {
           this.grids.pop();
         },
         reset() {
-          this.grids = Array.from({ length: 5}, _ => 100 + 300 * Math.random());
+          this.grids = Array.from({ length: 8 }, _ => 200 + 200 * Math.random());
         }
       }
     });
